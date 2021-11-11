@@ -32,3 +32,16 @@ for line in input_file:
 
     # Append the dictionary into list
     sales_data.append(dictionary)
+
+# 4. Outputting data to json file
+
+# Import the json module
+import json
+
+# Open the output file and dump the data to it
+output_file = open(output_file_name, 'w')
+json.dump(sales_data, output_file)
+
+# Closing file streams
+input_file.close()
+output_file.close()
